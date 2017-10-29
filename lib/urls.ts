@@ -32,3 +32,21 @@ export const roomMemberIds = (roomId: string, start?: string) =>
 export const leaveGroup = (groupId: string) => apiURL(`group/${groupId}/leave`);
 
 export const leaveRoom = (roomId: string) => apiURL(`room/${roomId}/leave`);
+
+export const getRichMenu = (richMenuId: string) => apiURL(`richmenu/${richMenuId}`);
+
+export const createRichMenu = () => apiURL(`richmenu`);
+
+export const deleteRichMenu = (richMenuId: string) => apiURL(`richmenu/${richMenuId}`);
+
+export const getRichMenuUser = (userId: string) => apiURL(`user/${userId}/richmenu`);
+
+export const linkRichMenuUser = (userId: string, richMenuId: string) => apiURL(`user/${userId}/richmenu/${richMenuId}`);
+
+export const unlinkRichMenuUser = (userId: string) => apiURL(`user/${userId}/richmenu`);
+
+export const downloadRichMenuImage = (richMenuId: string) => apiURL(`richmenu/${richMenuId}/content`);
+
+export const uploadRichMenuImage = (richMenuId: string) => apiURL(`richmenu/${richMenuId}/content`);
+
+export const getRichMenuList = () => apiURL(`richmenu/list`);
